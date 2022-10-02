@@ -1,6 +1,12 @@
 package personnages;
 
 public class Village {
-	private //TODO
+	private String nom;
+	private Chef chef;
 
+	public Village(String nom, Chef chef) {
+		this.nom = nom;
+		this.chef = chef;
+	}
+	
 }
