@@ -9,12 +9,16 @@ public class Romain {
 		this.force = force;
 	}
 	
+	public int getForce() {
+		return force;
+	}
+
 	public String getNom() {
 		return nom;
 	}
 	
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "Â« " + texte + "Â»");
+		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 	
 	private String prendreParole() {
