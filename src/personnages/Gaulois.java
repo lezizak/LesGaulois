@@ -43,11 +43,22 @@ public class Gaulois {
 
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la m�choire de " + romain.getNom());
-		trophees = romain.recevoirCoup((force / 3) * effetPotion);
-		for (int i = 0; trophees != null && i < trophees.length; i++, nbTrophees++) {
-			this.trophees[nbTrophees] = trophees[i];
+		Equipement[] listEq = romain.recevoirCoup((force / 3) * effetPotion);
+		for (int i = 0; listEq != null && i < listEq.length; i++, nbTrophees++) {
+			trophees[nbTrophees] = listEq[i];
 		}
+	}	
+	
+	public void faireUneDonnation(Musee musee) {
+		if (nbTrophees == 0) return;
+		String texte = "Je donne au musee tous mes trophees :";
+		for(int i=0; i < nbTrophees; i++) {
+			musee.donnerTrophees(this, trophees[i]);
+			texte += "\n-" + trophees[i];
+		}
+		parler(texte);
 	}
+	
 
 
 ///////////main
