@@ -1,8 +1,8 @@
 package personnages;
 
 public class Trophee {
-	Gaulois gaulois;
-	Equipement equipement;
+	private Gaulois gaulois;
+	private Equipement equipement;
 	
 	public Trophee(Gaulois gaulois, Equipement equipement) {
 		super();

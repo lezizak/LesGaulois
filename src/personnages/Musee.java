@@ -1,8 +1,8 @@
 package personnages;
 
 public class Musee {
-	Trophee[] places = new Trophee[200];
-	int nbTrophee = 0;
+	private Trophee[] places = new Trophee[200];
+	private int nbTrophee = 0;
 	
 	public void donnerTrophees(Gaulois gaulois, Equipement equipement) {
 		places[nbTrophee] = new Trophee(gaulois, equipement);
@@ -19,7 +19,7 @@ public class Musee {
 	
 	public static void main(String[] args) {
 		Musee musee = new Musee();
-		Gaulois asterix = new Gaulois("AstÃ©rix", 8);
+		Gaulois asterix = new Gaulois("Astérix", 8);
 		Gaulois obelix = new Gaulois("Obelix", 80);
 		musee.donnerTrophees(asterix, Equipement.CASQUE);
 		musee.donnerTrophees(asterix, Equipement.BOUCLIER);
